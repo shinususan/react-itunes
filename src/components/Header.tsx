@@ -20,10 +20,18 @@ class Header extends React.Component<any, any> {
     const { mediaTypes, startSearch }: any = this.props;
     const { searchText, searchMedia }: any = this.state;
 
+
     return (
       <>
-        <h2>iTunes Search API</h2>
+      <header>
+        <div className="logo-wrapper">
+          <div className="logo">
+          </div>
+          <h2>iTunes Search</h2>
+        </div>
+        
         {/* Search field */}
+        <div className="search-box">
         <TextField
           id="search"
           label="Search"
@@ -33,6 +41,7 @@ class Header extends React.Component<any, any> {
           placeholder="Search..."
           onChange={this.handleSearchTextChange}
         />
+            
 
         {/* Search button */}
         <Button
@@ -41,6 +50,8 @@ class Header extends React.Component<any, any> {
         >
           Search
         </Button>
+        </div> 
+        </header>
       </>
     );
   }

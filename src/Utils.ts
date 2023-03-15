@@ -11,14 +11,17 @@ export const mediaTypes = [
   "all",
 ];
 
-export async function itunesApiRequest(term: string, media = "all") {
+export async function itunesApiRequest(
+  term: string,
+  media = "all",
+  offset = "0"
+) {
   const url = new URL("https://itunes.apple.com/search");
   const params = {
-    country: "FR",
-    lang: "fr_fr",
-    limit: "50",
+    limit: "10",
     term,
     media,
+    offset,
   };
   try {
     url.search = new URLSearchParams(params).toString();
