@@ -23,34 +23,36 @@ class Header extends React.Component<any, any> {
 
     return (
       <>
-      <header>
-        <div className="logo-wrapper">
-          <div className="logo">
-          </div>
-          <h2>iTunes Search</h2>
-        </div>
-        
-        {/* Search field */}
-        <div className="search-box">
-        <TextField
-          id="search"
-          label="Search"
-          variant="standard"
-          type="text"
-          value={searchText}
-          placeholder="Search..."
-          onChange={this.handleSearchTextChange}
-        />
-            
+        <header>
+          <div className="logo-wrapper">
+            <div className="logo">
+            </div>
 
-        {/* Search button */}
-        <Button
-          variant="contained"
-          onClick={() => startSearch(searchText, searchMedia)}
-        >
-          Search
-        </Button>
-        </div> 
+            {/* Search field */}
+            <div className="search-box">
+              <TextField
+                sx={{ width: 1 }}
+                id="search"
+                label="Search"
+                variant="outlined"
+                type="text"
+                placeholder="Search songs..."
+                onChange={this.handleSearchTextChange}
+              />
+
+              {/* Search button */}
+              <div className="search-btn-container">
+                <Button
+                  variant="contained"
+                  onClick={() => startSearch(searchText, searchMedia)}
+
+                >
+                  Search
+                </Button>
+              </div>
+            </div>
+            <h2>iTunes Search</h2>
+          </div>
         </header>
       </>
     );

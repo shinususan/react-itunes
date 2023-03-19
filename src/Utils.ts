@@ -25,11 +25,14 @@ export async function itunesApiRequest(
   };
   try {
     url.search = new URLSearchParams(params).toString();
-    const response = await fetch(url);
+    const response = await fetch(url.toString());
     const data = await response.json();
     console.log(data);
     return data;
   } catch (error) {
     console.error(error);
+    return {
+      results: []
+    };
   }
 }

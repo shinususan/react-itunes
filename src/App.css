@@ -2,71 +2,67 @@
   /* display: grid;
   grid-template-columns: 1fr 1fr 1fr; */
   display: flex;
-flex-wrap: wrap;
-align-content: flex-start;
-width: 100%;
-height: calc(100vh - 155px);
-padding: 155px 50px 0 50px;
-box-sizing: border-box;
-}
-.infinite-scroll-component {
   flex-wrap: wrap;
   align-content: flex-start;
-  padding: 0 90px;
-  display: flex;
-  padding-top: 146px;
+  width: 100%;
+  height: calc(100vh - 155px);
+  padding: 155px 50px 0 50px;
+  box-sizing: border-box;
 }
-.logo{
+
+.item-list-container {
+  padding: 6rem 1rem 1rem;
+}
+
+.logo {
   background-image: url('../src/assets/new-next-black-logo.svg');
   height: 40px;
-    width: 100px;
-    background-repeat: no-repeat;
-    background-position: left;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-position: left;
 }
-header{
+
+header {
   display: flex;
   flex-wrap: wrap;
-align-content: flex-start;
-height: 155px;
-position: fixed;
-width: 100%;
-top: 0;
-left: 0;
-z-index: 9999;
-background-color: white;
-height: 155px;
-
+  align-content: flex-start;
+  height: 5rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: white;
 }
-.logo-wrapper{
+
+.logo-wrapper {
   width: 100%;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ccc;
-    box-shadow: 2px 3px 11px #ccc;
-    padding: 15px 30px;
+  box-shadow: 2px 3px 11px #ccc;
+  padding: 15px 30px;
 }
-header .logo{
+
+header .logo {
   width: 50%;
   height: 40px;
 }
+
 header h2 {
   width: 50%;
   text-align: right;
   margin: 0;
 }
+
 .search-box {
-  width: 100%;
+  width: 30rem;
   justify-content: center;
   display: flex;
-  padding-top: 30px;
+  background-color: white;
+  align-items: center;
 }
-.css-1oqv2c0-MuiPaper-root-MuiCard-root{
-  justify-content: space-between;
-}
-.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.css-1oqv2c0-MuiPaper-root-MuiCard-root{
- 
-  width: 48%;
-  padding: -3px;
-  margin: 10px;
 
+.search-btn-container {
+  margin-left: 2rem;
 }

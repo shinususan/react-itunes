@@ -8,7 +8,7 @@ class App extends Component<any, any> {
   constructor(props: any) {
     super(props);
     this.state = {
-      searchResults: [],
+      searchResults: null,
       searchText: "",
       mediaType: "all",
       offset: 0,
@@ -29,9 +29,11 @@ class App extends Component<any, any> {
       media ? media : this.state.mediaType,
       this.state.offset
     );
-    this.setState({
-      searchResults: [...this.state.searchResults, ...response.results],
-    });
+    if (response) {
+      this.setState({
+        searchResults: [...this.state.searchResults, ...response.results],
+      });
+    }
   }
 
   render() {

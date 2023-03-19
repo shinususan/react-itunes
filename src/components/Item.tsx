@@ -1,12 +1,12 @@
-import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Hidden, Typography } from "@mui/material";
 
 const Item = ({ kind, artistName, trackName, artworkUrl100 }: any) => {
   return (
     <>
-      <Card sx={{ display: "flex" }}>
+      <Card sx={{ display: "flex", width: 1, justifyContent: "space-between", boxShadow: 3 }}>
         <Box sx={{ display: "flex", flexDirection: "column" }}>
           <CardContent sx={{ flex: "1 0 auto" }}>
-            <Typography component="div" variant="h5">
+            <Typography component="div" variant="h6">
               {trackName}
             </Typography>
             <Typography
@@ -18,9 +18,10 @@ const Item = ({ kind, artistName, trackName, artworkUrl100 }: any) => {
             </Typography>
           </CardContent>
         </Box>
+
         <CardMedia
           component="img"
-          sx={{ width: 151 }}
+          sx={{ width: 150, height: 150, overflow: "hidden", flexShrink: 0 }}
           image={artworkUrl100}
           alt=""
         />
